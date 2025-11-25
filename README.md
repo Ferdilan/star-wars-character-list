@@ -1,16 +1,58 @@
-# starwars_app
+# Star Wars Character Explorer
 
-A new Flutter project.
+![Flutter](https://img.shields.io/badge/Flutter-3.0%2B-blue?logo=flutter) ![Dart](https://img.shields.io/badge/Dart-2.17%2B-blue?logo=dart) ![License](https://img.shields.io/badge/License-MIT-green)
 
-## Getting Started
+Aplikasi mobile berbasis Flutter yang menampilkan daftar karakter dari semesta Star Wars menggunakan [SWAPI (The Star Wars API)](https://swapi.dev/). Proyek ini dikembangkan sebagai pemenuhan Technical Test untuk posisi Mobile Developer Magang Mandiri SEAL Batch 2 2025.
 
-This project is a starting point for a Flutter application.
+## Gambaran Proyek
 
-A few resources to get you started if this is your first Flutter project:
+Aplikasi ini dirancang untuk menunjukkan implementasi arsitektur yang bersih, manajemen state yang efisien, dan penanganan data asynchronous.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**Fitur Utama:**
+* **Data Fetching:** Integrasi REST API untuk mengambil data karakter (Nama & Tinggi).
+* **Infinite Scroll (Pagination):** Memuat data secara dinamis saat pengguna menggulir ke bawah, menangani limitasi pagination API SWAPI.
+* **Robust Error Handling:** Penanganan gracefully untuk kondisi offline, server error, atau data kosong.
+* **Clean UI:** Antarmuka bertema gelap (Dark Mode) yang responsif dan estetis.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Arsitektur & Teknologi
+
+Proyek ini menerapkan prinsip **Separation of Concerns**:
+
+* **`lib/models`**: Mendefinisikan struktur data (`Character`) dengan factory method untuk parsing JSON yang aman (Null Safety).
+* **`lib/services`**: Layer khusus (`ApiService`) untuk menangani komunikasi HTTP dan logika pagination.
+* **`lib/screens`**: Layer UI yang merespons perubahan state tanpa logika bisnis yang tercampur.
+
+### Tech Stack
+* **Framework:** Flutter (Dart)
+* **Networking:** `http` package
+* **Platform:** Android / iOS
+
+## Cara Menjalankan (Installation)
+
+1.  **Clone Repository**
+    ```bash
+    git clone [https://github.com/Ferdilan/star-wars-character-list.git)
+    ```
+
+2.  **Masuk ke Direktori**
+    ```bash
+    cd star-wars-character-list
+    ```
+
+3.  **Install Dependencies**
+    ```bash
+    flutter pub get
+    ```
+
+4.  **Jalankan Aplikasi**
+    ```bash
+    flutter run
+    ```
+    
+## Author
+
+**Ferdilan**
+*Aspiring Mobile Developer & Telecommunication Engineering Student*
+
+---
+*Dikirimkan untuk: Pendaftaran Magang Mandiri SEAL Batch 1 2026*
